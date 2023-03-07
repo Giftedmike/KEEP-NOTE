@@ -15,14 +15,19 @@
         <div class="row">
             <div class="col">
                 <h1>MIKE'S KEEP NOTE</h1>
-        <textarea name="keppNote" id="keepNote" cols="50" rows="10" placeholder="Enter Your Notes Here"></textarea>
-         <br>
-        <button onclick="addNotes()" >ADD NOTES</button>
+        <form action="#"></form>
+             <input id="keepNoteHead" type="text" placeholder="Enter Your Heading Here" required><br><br>
+             <textarea name="keppNote" id="keepNoteBody" cols="50" rows="10" placeholder="Enter Your Notes Here"></textarea>
+             <br>
+             <button onclick="addNotes()" >ADD NOTES</button>
+             
+        </form>
             </div>
             <div class="col">
                 <div class="card">
                     <div class="card-body">
                         <div id="showBoard"></div>
+                        
                     </div>
                 </div>
                 

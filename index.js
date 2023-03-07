@@ -13,8 +13,9 @@ function getNote(){
 }
 
 function addNotes() {
-    let item = document.getElementById("keepNote").value;
-    let noteObj = {item: item, Date: new Date().toUTCString()};
+    let item = document.getElementById("keepNoteHead").value;
+    let noteBody = document.getElementById("keepNoteBody").value;
+    let noteObj = {item: item, noteBody: noteBody,  Date: new Date().toUTCString()};
 
     noteArray.push(noteObj);
 
@@ -29,8 +30,13 @@ function saveNote(){
 function displayNote() {
     let content = "";
     for(i = 0; i < noteArray.length; i++){
-        content += "<p>" + noteArray[i].item + "</p>" + "<hr>"
+        content += "<h4>" + noteArray[i].item + "</h4>"
+        content += "<p>" + noteArray[i].Date + "</p>"
+        content += "<p>" + noteArray[i].noteBody + "</p>" + "<hr>"
     }
     
     document.getElementById("showBoard").innerHTML = content;
+}
+function clearNote() {
+    let noteArray = "";
 }
